@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    background-image: url(bg-login.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    height: 40%;
+    width: 40%;
+
+}
+
+button{
+    width: 150px;
+    padding: 5px;
+}
+
+.buttons{
+    display: flex;
+    gap: 20px
+}
