@@ -1,4 +1,4 @@
-import { updateHighestScore, getHighestScore } from './scores.js';
+import { updateHighestScore, getHighestScore } from './js/scores.js';
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-auth.js";
 
 
