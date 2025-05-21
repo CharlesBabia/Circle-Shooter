@@ -13,10 +13,10 @@ const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
     if (user) {
       console.log("User is signed in:", user);
-      // You can access user.uid or other user details here
+    
     } else {
       console.log("No user is signed in.");
-      // Redirect to login page if no user is signed in
+     
       window.location.href = "index.html";
     }
   });
@@ -139,7 +139,7 @@ const particles = [];
 let enemySpawnInterval
 //spawn enemies 
 function spawnEnemies() {
-    clearInterval(enemySpawnInterval);
+    clearInterval(enemySpawnInterval); //para dli mo double ang speed after restart
     enemySpawnInterval = setInterval(() => {
         const radius = Math.random() * (30 - 8) + 8;
 
@@ -177,12 +177,12 @@ function gameEnd(){
 
     onAuthStateChanged(auth, (user) => {
         if (user) {
-            const uid = user.uid; // Get the user's unique ID
+            const uid = user.uid; 
 
-            // Retrieve the current highest score for the user
+       
             getHighestScore(uid).then((highestScore) => {
                 if (highestScore === null || Score > highestScore) {
-                    // Update the database if the current score is higher
+                    
                     updateHighestScore(uid, Score);
                     document.querySelector('.HIGH').innerHTML = "HIGHEST SCORE: " + Score;
                 } else {
@@ -252,7 +252,7 @@ function animate() {
             //projectile hits enemy
             if (dist - enemy.radius - projectile.radius < 1 ){
 
-                //creates explosion
+                //creates explosion/particles
                 for(let i = 0; i < enemy.radius * 2; i++){
                     particles.push(new Particle(
                         projectile.x, 
